@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+</head>
+<body>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main-wrapper{
+            width: 400px;
+            margin: auto;
+            padding-top: 200px;
+        }
+
+        .swiper-slide img{
+            width: 100%;
+        }
+
+        /* .main-wrapper .swiper-button-prev:after{
+            position: absolute;
+            left: -45px;
+            font-size: large;
+            font-weight: 600;
+        }
+        .main-wrapper .swiper-button-next:after{
+            position: absolute;
+            right: -45px;
+            font-size: large;
+            font-weight: 600;
+        } */
+
+    </style>
+
+
+    
+    <div class="main-wrapper">
+        <div class="swiper mySwiper">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="images/pexels-googledeepmind-17483906.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/pexels-googledeepmind-17483907.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/pexels-googledeepmind-17483908.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/pexels-googledeepmind-17483910.jpg" alt=""></div>
+                <div class="swiper-slide"><img src="images/pexels-googledeepmind-17483908.jpg" alt=""></div>
+            </div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          grabCursor: true,
+          effect: "creative",
+          creativeEffect: {
+            prev: {
+              shadow: true,
+              translate: [0, 0, -400],
+            },
+            next: {
+              translate: ["100%", 0, 0],
+            },
+          },
+          navigation:{
+            nextEl:".swiper-button-next",
+            prevEl:".swiper-button-prev",
+          },
+        });
+      </script>
+
+</body>
+</html>
